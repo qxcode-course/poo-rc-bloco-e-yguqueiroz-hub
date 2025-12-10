@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-10_13-57-39",
+            "content": "from abc import ABC, abstractmethod\nclass Veiculo(ABC):\n    def __init__(self, id: str, entrada: int, tipo: str):\n        self.id = id\n        self.entrada = entrada\n        self.tipo = tipo\n    @abstractmethod\n    d\n\n\n",
+            "lines": "10"
+        }
+    ]
+}

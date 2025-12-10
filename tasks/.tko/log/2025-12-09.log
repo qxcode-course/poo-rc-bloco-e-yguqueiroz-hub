@@ -1,0 +1,7 @@
+2025-12-09 14:35:42, MOVE, v:1, k:poo@pagamento, mode:DOWN
+2025-12-09 14:35:45, MOVE, v:1, k:poo@pagamento, mode:PICK
+2025-12-09 14:35:57, MOVE, v:1, k:poo@pagamento, mode:BACK
+2025-12-09 14:35:58, MOVE, v:1, k:poo@pagamento, mode:PICK
+2025-12-09 14:36:11, EXEC, v:1, k:poo@pagamento, mode:FREE, size:35
+2025-12-09 14:42:49, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:36
+2025-12-09 14:42:50, MOVE, v:1, k:poo@pagamento, mode:BACK
