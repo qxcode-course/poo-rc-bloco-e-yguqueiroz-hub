@@ -2,8 +2,28 @@
     "patches": [
         {
             "label": "2025-12-10_13-57-39",
-            "content": "from abc import ABC, abstractmethod\nclass Veiculo(ABC):\n    def __init__(self, id: str, entrada: int, tipo: str):\n        self.id = id\n        self.entrada = entrada\n        self.tipo = tipo\n    @abstractmethod\n    d\n\n\n",
+            "content": "@@ -213,67 +213,7 @@\n    d\n-ef calcular_valor(self, saida: int) -%3E float:%0A        pass%0A \n %0A%0A%0A\n",
             "lines": "10"
+        },
+        {
+            "label": "2025-12-11_15-15-07",
+            "content": "@@ -29,18 +29,16 @@\n tmethod%0A\n-%0A%0A\n class Ve\n@@ -268,8 +268,12 @@\n    pass%0A\n+ %0A%0A%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2025-12-11_15-32-43",
+            "content": "@@ -30,16 +30,17 @@\n method%0A%0A\n+%0A\n class Ve\n@@ -274,169 +274,4 @@\n ass%0A\n-%0A    def __str__(self):%0A        fmt_tipo = self.tipo.rjust(10, %22-%22)%0A        fmt_id = self.id.ljust(10, %22-%22)%0A        return f%22%7Bfmt_tipo%7D %7C %7Bfmt_id%7D : %7Bself.entrada%7D%22%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2025-12-11_15-50-30",
+            "content": "@@ -434,9 +434,8 @@\n trada%7D%22%0A\n-%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2025-12-11_16-08-40",
+            "content": "from abc import ABC, abstractmethod\n\nclass Veiculo(ABC):\n    def __init__(self, id: str, entrada: int, tipo: str):\n        self.id = id\n        self.entrada = entrada\n        self.tipo = tipo\n    @abstractmethod\n    def calcular_valor(self, saida: int) -> float:\n        pass\n\n    def __str__(self):\n        fmt_tipo = self.tipo.rjust(10, \"-\")\n        fmt_id = self.id.ljust(10, \"-\")\n        return f\"{fmt_tipo} | {fmt_id} : {self.entrada}\"\n\n",
+            "lines": "16"
         }
     ]
 }
