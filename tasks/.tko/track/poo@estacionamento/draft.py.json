@@ -22,8 +22,13 @@
         },
         {
             "label": "2025-12-11_16-08-40",
-            "content": "from abc import ABC, abstractmethod\n\nclass Veiculo(ABC):\n    def __init__(self, id: str, entrada: int, tipo: str):\n        self.id = id\n        self.entrada = entrada\n        self.tipo = tipo\n    @abstractmethod\n    def calcular_valor(self, saida: int) -> float:\n        pass\n\n    def __str__(self):\n        fmt_tipo = self.tipo.rjust(10, \"-\")\n        fmt_id = self.id.ljust(10, \"-\")\n        return f\"{fmt_tipo} | {fmt_id} : {self.entrada}\"\n\n",
+            "content": "@@ -439,446 +439,4 @@\n %7D%22%0A%0A\n-%0Aclass Bike(Veiculo):%0A    def __init__(self, id: str, entrada: int):%0A        super().__init__(id, entrada, %22Bike%22, entrada)%0A%0A    def calcular_valor(self, saida_saida: int) -%3E float:%0A        return 3.00%0Aclass Moto(Veiculo):%0A    def __init__(self, id: str, entrada: int):%0A        super().__init__(id, %22Moto%22, entrada)%0A%0A    def calcular_valor(self, hora_saida: int) -%3E float:%0A        tempo = hora_saida - self.entrada%0A        return tempo / 20.0\n",
             "lines": "16"
+        },
+        {
+            "label": "2025-12-12_20-20-48",
+            "content": "from abc import ABC, abstractmethod\n\nclass Veiculo(ABC):\n    def __init__(self, id: str, entrada: int, tipo: str):\n        self.id = id\n        self.entrada = entrada\n        self.tipo = tipo\n    @abstractmethod\n    def calcular_valor(self, saida: int) -> float:\n        pass\n\n    def __str__(self):\n        fmt_tipo = self.tipo.rjust(10, \"-\")\n        fmt_id = self.id.ljust(10, \"-\")\n        return f\"{fmt_tipo} | {fmt_id} : {self.entrada}\"\n\n\nclass Bike(Veiculo):\n    def __init__(self, id: str, entrada: int):\n        super().__init__(id, entrada, \"Bike\", entrada)\n\n    def calcular_valor(self, saida_saida: int) -> float:\n        return 3.00\nclass Moto(Veiculo):\n    def __init__(self, id: str, entrada: int):\n        super().__init__(id, \"Moto\", entrada)\n\n    def calcular_valor(self, hora_saida: int) -> float:\n        tempo = hora_saida - self.entrada\n        return tempo / 20.0",
+            "lines": "30"
         }
     ]
 }
