@@ -28,3 +28,14 @@ class Moto(Veiculo):
     def calcular_valor(self, hora_saida: int) -> float:
         tempo = hora_saida - self.entrada
         return tempo / 20.0
+    
+class Carro(Veiculo):
+    def __init__(self, id: str, entrada: int):
+        super().__init__(id, "Carro", entrada)
+
+    def calcular_valor(self, hora_saida: int) -> float:
+        tempo = hora_saida - self.entrada
+        valor = tempo / 10.0
+        return max(5.00, valor)
+    
+class Estacionamento
