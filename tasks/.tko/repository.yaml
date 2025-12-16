@@ -12,13 +12,14 @@ sources:
   type: clone
   branch: master
   cache_path: ''
-  cache_timestamp: '2025-12-15 12:26:00'
+  cache_timestamp: '2025-12-16 12:56:38'
   filters:
   - herança
 expanded:
 - poo@campanha-principal
 - poo@bloco_f-herança-i
-tasks: {}
+tasks:
+  poo@estacionamento: '{rate:100}'
 flags:
   quests: 0
   tracks: 0
