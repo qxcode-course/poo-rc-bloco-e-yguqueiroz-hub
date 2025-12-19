@@ -7,8 +7,13 @@
         },
         {
             "label": "2025-12-09_14-42-49",
-            "content": "from abc import ABC, abstractmethod\n\nclass Pagamento(ABC):\n    def __init__(self, valor: float, descricao: str):\n        self.valor: float = valor\n        self.descricao: str = descricao\n    \n    def validar_valor(self):\n        if self.valor <= 0:\n            raise ValueError(\"Valor negativo\")\n    \n    def resumo(self):\n        return f\"Pagamento de R$ {self.valor}: {self.descricao}\"\n    \n    @abstractmethod\n    def processar(self):\n        pass\n\nclass Pix(Pagamento):\n    def __init__(self, valor: float, descricao: str, chave: str, banco: str):\n        super().__init__(valor, descricao)\n        self.chave = chave\n        self.banco = banco\n\n    def processar(self):\n        print(f\"Pagando pix produto {self.descricao} para {self.chave} do banco {self.banco} no valor de {self.valor}\")\n    \n\n\ndef processar_pagamento(pagamento: Pagamento):\n    pagamento.validar_valor()\n    pagamento.resumo()\n    pagamento.processar()\n\npix = Pix(2.50, \"caf\u00e9 coado\", \"123\", \"pikipeiii\")\nprocessar_pagamento(pix)\n",
+            "content": "@@ -443,21 +443,16 @@\n     pass\n-%0A    \n %0A%0Aclass \n",
             "lines": "36"
+        },
+        {
+            "label": "2025-12-19_12-19-44",
+            "content": "from abc import ABC, abstractmethod\n\nclass Pagamento(ABC):\n    def __init__(self, valor: float, descricao: str):\n        self.valor: float = valor\n        self.descricao: str = descricao\n    \n    def validar_valor(self):\n        if self.valor <= 0:\n            raise ValueError(\"Valor negativo\")\n    \n    def resumo(self):\n        return f\"Pagamento de R$ {self.valor}: {self.descricao}\"\n    \n    @abstractmethod\n    def processar(self):\n        pass\n    \n\nclass Pix(Pagamento):\n    def __init__(self, valor: float, descricao: str, chave: str, banco: str):\n        super().__init__(valor, descricao)\n        self.chave = chave\n        self.banco = banco\n\n    def processar(self):\n        print(f\"Pagando pix produto {self.descricao} para {self.chave} do banco {self.banco} no valor de {self.valor}\")\n    \n\n\ndef processar_pagamento(pagamento: Pagamento):\n    pagamento.validar_valor()\n    pagamento.resumo()\n    pagamento.processar()\n\npix = Pix(2.50, \"caf\u00e9 coado\", \"123\", \"pikipeiii\")\nprocessar_pagamento(pix)\n",
+            "lines": "37"
         }
     ]
 }
